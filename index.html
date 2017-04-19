@@ -13,56 +13,96 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
     <style>
         path {
-              stroke: gray;
+              stroke: black;
               fill: white;
             }
+
+        .section-heading {
+          padding-top: 50px;
+        }
+
+
         .party-Auvergne-Rhône-Alpes {
-              fill: blue;
-              background-color: blue;
+              fill: #a6cee3;
+              background-color: #a6cee3;
               color:white;
+              padding:5px 2px 2px 3px;
+            }
+        .party-Bourgogne-Franche-Comté {
+              fill: #1f78b4;
+              background-color: #1f78b4;
+              color:white;
+              padding:5px 2px 2px 3px;
             }
         .party-Bretagne {
-              fill: red;
-              background-color: red;
-              color:white;
-            }
-        .party-FraukePetry {
-              fill: blue;
-              background-color: blue;
-              color:white;
-            }
-        .party-CemÖzdemir {
-              fill: green;
-              background-color: green;
-              color:white;
-            }
-        .party-ChristianLindner {
-              fill: yellow;
-              background-color: yellow;
+              fill: #b2df8a;
+              background-color: #b2df8a;
               color:black;
+              padding:5px 2px 2px 3px;
             }
-        .party-BjörnHöcke {
-              fill: brown;
-              background-color: brown;
+        .party-Centre-Val-de-Loire {
+              fill: #33a02c;
+              background-color: #33a02c;
               color:white;
+              padding:5px 2px 2px 3px;
             }
-        .party-SahraWagenknecht {
-              fill: purple;
-              background-color: purple;
+        .party-Corse {
+              fill: #fb9a99;
+              background-color: #fb9a99;
               color:white;
+              padding:5px 2px 2px 3px;
             }
-        .party-mehreregleichstark {
-              fill: white;
-              background-color: #EEE;
+        .party-Grand-Est {
+              fill: #e31a1c;
+              background-color: #e31a1c;
+              color:white;
+              padding:5px 2px 2px 3px;
+            }
+        .party-Hauts-de-France {
+              fill: #8dd3c7;
+              background-color: #8dd3c7;
+              color:white;
+              padding:5px 2px 2px 3px;
+            }
+        .party-Île-de-France {
+              fill: #fdbf6f;
+              background-color: #fdbf6f;
+              color:white;
+              padding:5px 2px 2px 3px;
+            }
+        .party-Nouvelle-Aquitaine {
+              fill: #ff7f00;
+              background-color: #ff7f00;
               color:black;
+              padding:5px 2px 2px 3px;
             }
-        .party-nocities {
-              fill: #3d3f42;
-              background-color: #3d3f42;
+        .party-Pays-de-la-Loire {
+              fill: #cab2d6;
+              background-color: #cab2d6;
               color:white;
+              padding:5px 2px 2px 3px;
+            }
+         .party-PACA {
+              fill: #6a3d9a;
+              background-color: #6a3d9a;
+              color:white;
+              padding:5px 2px 2px 3px;
+            }
+          .party-Normandie {
+              fill: #ffff99;
+              background-color: #ffff99;
+              color:black;
+              padding:5px 2px 2px 3px;
+            }
+         .party-Occitanie {
+              fill: #b15928;
+              background-color: #b15928;
+              color:white;
+              padding:5px 2px 2px 3px;
             }
         .mouseoverColor {
               fill: pink;
@@ -73,11 +113,29 @@
           list-style-type: none;
           width: 100%;
           margin: 0;
-          padding: 0;
+          padding-top: 80px;
+          left: -150px;
+          position:relative;
+          }
+
+          @media (max-width: 990px) {
+        #legend{
+         padding-top: 0px;
+         margin-top: -150px;
+         left: 0px;
+         position:relative;
+      }
+    }
+
+          #logo {
+        text-align:left !important;
+
+
           }
 
           .svg-container {
               display: inline-block;
+              padding-top: -100px;
               position: relative;
               width: 100%;
               padding-bottom: 100%; /* aspect ratio */
@@ -88,15 +146,40 @@
           .svg-content-responsive {
                 display: inline-block;
                 position: absolute;
-                top: 10px;
-                left: 0;
-            } 
+                top: -50px;
+                left: 50px;
+            }
+
+          p {
+
+              padding-top: 5px;
+              padding-left: 5px;
+              font-family: 'Roboto', sans-serif !important; 
+              line-height: 0px !important;
+
+            }
+
+
+          h2{font-family: 'Roboto condensed', sans-serif !important;
+            text-align:left !important;
+            color:#58595b
+ 
+
+
+          }
+
+          li {
+
+
+              font-family: 'Roboto', sans-serif !important; 
+
+            }
 
 
           div.tooltip {
               position: absolute;
               text-align: center;
-              padding: 2px 8px;
+              padding: 3px 8px;
               min-width: 50px;
               font: 12px sans-serif;
               background: #fff;
@@ -121,13 +204,15 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-10 col-md-offset-1">
-                    <h2 class="section-heading">Search Interest in Paris Saint Germain football Team</h2>
-                    <p>Which regions are searching the most for the team.</p>
+                    <h2 class="section-heading">Search Interest in Paris Saint Germain football club during last seven days in France</h2>
+                    <div id="logo">
+                      <p><a href="https://trends.google.fr/trends/" target="_blank"><img src="logo.png" alt="Smiley face" width="15%"></a>  |    <a href="https://pitchinteractiveinc.github.io/tilegrams/" target="_blank"><img src="tilegrams.png" alt="Smiley face" width="10%"></a></p>
+                    </div
                 </div>
              </div>
             <div class="row">
                 <div id="tilecontainer" class="col-md-10"></div>
-                <div id="tilelegend" class="col-md-2"><ul id="legend"></ul></div>
+                <div id="tilelegend" class="col-md-2"><ul id="legend"><h4>Regions</h4></ul></div>
                 </div>
             </div>
         </div>
